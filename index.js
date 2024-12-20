@@ -26,7 +26,7 @@ app.use(cors()); // Use this after the variable declaration
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(Router);
 
 app.get('/home', (req, res) => {
   res.status(200).json('Welcome, your app is working well');
