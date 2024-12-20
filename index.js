@@ -28,7 +28,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(Router);
 
+mongoose.set('strictQuery', true);
+mongoose.connect(process.env.MONGO_URI, {
 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true,
+    // useFindAndModify: false
+    
+    }, err => {
+    if(err) throw err;
+    console.log('Connected to MongoDB!!!')
+    });
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
