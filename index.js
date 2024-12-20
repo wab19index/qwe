@@ -14,7 +14,7 @@ const limiter = rateLimit({
 
 app.use(limiter);
 
-let port = process.env.PORT;
+let PORT = process.env.PORT;
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
