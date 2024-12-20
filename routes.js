@@ -36,6 +36,10 @@ app.get("/privacy_policy", async (req, res) => {
   res.sendFile(__dirname + "/privacy_policy.html");
 
 });
+app.get('/home', (req, res) => {
+  res.status(200).json('Welcome, your app is working well');
+});
+
 app.get("/delete_data", async (req, res) => {
   // res.json({ message: "Privacy Policy." });
   res.sendFile(__dirname + "/delete_data.html");

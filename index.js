@@ -28,9 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(Router);
 
-app.get('/home', (req, res) => {
-  res.status(200).json('Welcome, your app is working well');
-});
+
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
