@@ -7,10 +7,6 @@ const cors = require('cors');
 
 const app = express();
 
-
-
-
-
 let PORT = process.env.PORT;
 
 app.use((req, res, next) => {
@@ -29,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(Router);
 
 mongoose.set('strictQuery', true);
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(`mongodb+srv://wabindex:Marmon300@cluster0.2t2w8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`, {
 
     useNewUrlParser: true, 
     useUnifiedTopology: true,
